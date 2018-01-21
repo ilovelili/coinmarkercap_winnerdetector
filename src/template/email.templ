@@ -1,0 +1,25 @@
+<html>
+    </head>
+    <body>
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>Price(USD)</th>
+                <th>Price(BTC)</th>
+                <th>PercentChange(OneHour)</th>
+                <th>PercentChange(OneDay)</th>
+                <th>PercentChange(OneWeek)</th>
+            </tr>
+        {{- range .Tickers }}        
+            <tr>
+                <td>{{.ID}}</td>
+                <td>{{.PriceUSD}}</td>
+                <td>{{.PriceBTC}}</td>
+                <td>{{.PercentChangeOneHour}}</td>
+                <td>{{.PercentChangeOneDay}}</td>
+                <td>{{.PercentChangeOneWeek}}</td>
+            </tr>
+        {{- end}}          
+        </table>    
+</body>
+</html>

@@ -1,0 +1,13 @@
+{
+    "threshold": {
+        "maxpercentchangeinhour": 40.0,
+        "minpercentchangeinhour": -40.0
+    },    
+    "mail": {
+        "sender":  {
+            "account": "abc@gmail.com",
+            "password": "xxxxxxxxxxxxxxxxxx"
+        },
+        "receivers": "yyy@gmail.com,zzz@hotmail.com"
+    }
+}
