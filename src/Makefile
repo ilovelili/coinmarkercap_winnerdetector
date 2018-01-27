@@ -1,4 +1,3 @@
-TEST ?= $(shell go list ./... | grep -v sample)
 VERSION = $(shell grep 'version =' utils/version.go | sed -E 's/.*"(.+)"$$/\1/')
 
 default: all
@@ -11,10 +10,10 @@ deps:
 
 build: deps
 	go build -o marketcap 
-	cp config.json template ../ansible/playbooks/files/compiled
+	cp -r config.json template ../ansible/playbooks/files/compiled
 	mv marketcap ../ansible/playbooks/files/compiled
 
 version:
 	@echo $(VERSION)
 
-.PTHONY: all deps build test version
+.PTHONY: all deps build version
